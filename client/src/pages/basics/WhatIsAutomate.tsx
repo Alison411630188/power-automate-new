@@ -1,9 +1,9 @@
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Lightbulb, Users, Zap, Cpu, Workflow, Clock } from 'lucide-react';
-import Footer from '@/components/Footer';
+import { ArrowRight, Lightbulb, Users, Cpu, Workflow, Clock } from 'lucide-react';
 import { MotionContainer, PageTransition, HoverScale } from '@/components/MotionContainer';
+import Footer from '@/components/Footer';
 
 export default function WhatIsAutomate() {
   const coreFeatures = [
@@ -38,8 +38,9 @@ export default function WhatIsAutomate() {
           <div className="container">
             <MotionContainer direction="up">
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Power Automate 是什麼？</h1>
+              {/* 🌟 關鍵修正：精簡這裡的字數，讓它剛好折成 2 行 */}
               <p className="text-xl text-muted-foreground max-w-2xl">
-                Microsoft Power Automate 是一個雲端自動化服務，幫助您在最喜愛的應用程式和服務之間建立自動化工作流程，以同步處理檔案、取得通知、收集資料，並執行更多其他作業。
+                Microsoft Power Automate 是一個雲端自動化服務，幫助您在最喜愛的應用程式和服務之間建立自動化工作流程，輕鬆提升團隊生產力。
               </p>
               <div className="mt-8">
                 <Link href="/tutorials/operation-guide">
@@ -77,7 +78,11 @@ export default function WhatIsAutomate() {
                     </div>
                   </div>
                   <div className="bg-muted aspect-video rounded-2xl border border-border flex items-center justify-center text-muted-foreground">
-                    [ Power Automate 工作流程示意圖 ]
+                    <img
+                      src="/templates/Designer.png"
+                      alt="核心概念示意圖"
+                      className="w-full h-auto max-h-[400px] object-contain rounded-md shadow-sm border border-border hover:scale-[1.02] transition-transform duration-300"
+                    />
                   </div>
                 </div>
               </MotionContainer>
@@ -141,7 +146,7 @@ export default function WhatIsAutomate() {
                   <div>
                     <p className="font-bold text-lg text-foreground mb-2">💡 新手提示</p>
                     <p className="text-muted-foreground mb-3">
-                      Power Automate 設計得非常直觀，您不需要任何程式背景就能開始使用。最好的學習方式是：選擇一個簡單的重複性工作 → 建立一個自動化流程 → 測試並調整 → 逐步擴展到更複雜的工作流程。
+                      Power Automate 設計得非常直觀，您不需要複雜的培訓就能開始使用。最好的學習方式是：選擇一個簡單的重複性工作 → 建立一個自動化流程 → 測試並調整。
                     </p>
                     <p className="text-muted-foreground/80 text-sm">
                       Power Automate 提供免費版本，包含基本功能。多數企業可以免費開始使用，進階功能才需要付費授權。
