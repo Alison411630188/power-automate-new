@@ -7,7 +7,7 @@ import { MotionContainer, PageTransition, HoverScale } from '@/components/Motion
 
 const HERO_BG = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663446932732/47KbkvpLmL9hw6oikty2zt/hero-background-f72QBXASMByD6dkQHLkYv3.webp';
 const LEARNING_PATH_IMG = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663446932732/47KbkvpLmL9hw6oikty2zt/learning-path-XqbuTSKxSYNunr7DGZ28Xu.webp';
-const M365_ECOSYSTEM_IMG = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663446932732/47KbkvpLmL9hw6oikty2zt/m365-ecosystem-8PZToEcywNW7afX9YcAkhW.webp';
+const M365_ECOSYSTEM_IMG = '/templates/image26.png';
 
 export default function Home() {
   return (
