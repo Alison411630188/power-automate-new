@@ -17,7 +17,7 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Learning */}
+        {/* Learning (核心資源) */}
         <div>
           <h4 className="font-semibold mb-4 text-slate-200">核心資源</h4>
           <ul className="space-y-2 text-sm text-slate-400">
@@ -31,15 +31,16 @@ export default function Footer() {
                 操作教學
               </Link>
             </li>
+            {/* 將「應用情境」移至此處，並移除了「流程分析」 */}
             <li>
-              <Link href="/dashboard/chart-overview" className="hover:text-primary transition">
-                流程分析
+              <Link href="/scenarios/use-cases" className="hover:text-primary transition">
+                應用情境
               </Link>
             </li>
           </ul>
         </div>
 
-        {/* Support */}
+        {/* Support (支援服務) */}
         <div>
           <h4 className="font-semibold mb-4 text-slate-200">支援服務</h4>
           <ul className="space-y-2 text-sm text-slate-400">
@@ -51,11 +52,6 @@ export default function Footer() {
             <li>
               <Link href="/support/contact" className="hover:text-primary transition">
                 聯絡我們
-              </Link>
-            </li>
-            <li>
-              <Link href="/scenarios/use-cases" className="hover:text-primary transition">
-                應用情境
               </Link>
             </li>
           </ul>
