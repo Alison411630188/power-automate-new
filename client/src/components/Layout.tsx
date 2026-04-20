@@ -8,8 +8,7 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="min-h-screen bg-background text-foreground transition-colors duration-300 flex flex-col">
-      
+    <div className="min-h-screen bg-white text-slate-900 transition-colors duration-300 flex flex-col">
       {/* 🍔 上層麵包：共用的頂部導覽列 */}
       <Navigation />
 
