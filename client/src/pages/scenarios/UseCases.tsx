@@ -25,7 +25,7 @@ export default function UseCases() {
   const scenarios = [
     {
       id: 'save-attachments',
-      icon: <Save className="w-8 h-8 text-blue-500" />,
+      icon: <Save className="w-8 h-8" />,
       title: '自動儲存郵件附件到 OneDrive',
       description: '每次收到含附件的郵件都要手動下載另存新檔？這個流程會自動幫您把附件備份到指定的 OneDrive 資料夾。',
       steps: [
@@ -51,7 +51,7 @@ export default function UseCases() {
     },
     {
       id: 'vip-email-alert',
-      icon: <Mail className="w-8 h-8 text-orange-500" />,
+      icon: <Mail className="w-8 h-8" />,
       title: 'Outlook郵件 Teams 通知',
       description: '每天信件如雪片般飛來，擔心漏看重要人物的信？當收到特定對象來信時，立刻發送 Teams 訊息提醒自己。',
       steps: [
@@ -77,7 +77,7 @@ export default function UseCases() {
     },
     {
       id: 'daily-reminder',
-      icon: <Clock className="w-8 h-8 text-green-500" />,
+      icon: <Clock className="w-8 h-8" />,
       title: '早上定時發送天氣與提醒',
       description: '讓系統成為您的專屬秘書，每天早上 8:30 準時發送今天的當地天氣預報到您的信箱。',
       steps: [
@@ -103,7 +103,7 @@ export default function UseCases() {
     },
     {
       id: 'ai-email-summary',
-      icon: <Sparkles className="w-8 h-8 text-purple-500" />,
+      icon: <Sparkles className="w-8 h-8" />,
       title: '長郵件重點 AI 自動摘要',
       description: '每天收到的技術週報或會議記錄太長沒時間細讀？讓 AI 自動幫您整理出繁體中文重點摘要並傳送到 Teams。',
       steps: [
@@ -129,7 +129,7 @@ export default function UseCases() {
     },
     {
       id: 'sharepoint-approval',
-      icon: <ShieldCheck className="w-8 h-8 text-indigo-500" />,
+      icon: <ShieldCheck className="w-8 h-8" />,
       title: '文件上傳自動跑核准流程',
       description: '不用再寫 Email 詢問！只要將檔案上傳到指定資料夾，系統會自動通知主管審核。核准後，檔案會自動從「審查區」搬移到「已核准區」。',
       steps: [
@@ -155,7 +155,7 @@ export default function UseCases() {
     },
     {
       id: 'ai-email-translation-boris',
-      icon: <Languages className="w-8 h-8 text-emerald-500" />,
+      icon: <Languages className="w-8 h-8" />,
       title: '郵件 AI 自動摘要與翻譯',
       description: '利用自訂 AI 提示詞，當收到外語或長郵件時，系統自動將內容翻譯並摘要為繁體中文條列重點，直接推送到您的 Teams 聊天室。',
       steps: [
@@ -210,7 +210,7 @@ export default function UseCases() {
                       <Card className="border-border bg-card h-full flex flex-col hover:border-primary/40 hover:shadow-xl transition-all duration-300">
                         <CardHeader className="pb-4">
                           <div className="flex items-center gap-4">
-                            <div className="p-3 bg-muted rounded-xl shadow-inner">
+                            <div className="p-3 bg-muted rounded-xl shadow-inner text-primary">
                               {scenario.icon}
                             </div>
                             <CardTitle className="text-xl font-bold">{scenario.title}</CardTitle>
@@ -276,7 +276,7 @@ export default function UseCases() {
           <div className="relative w-full max-w-5xl max-h-[90vh] bg-background rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-border animate-in zoom-in-95 duration-200">
             <div className="flex items-center justify-between p-6 border-b border-border bg-card z-10 sticky top-0">
               <div className="flex items-center gap-4">
-                <div className="p-2 bg-muted rounded-lg hidden sm:block">
+                <div className="p-2 bg-muted rounded-lg hidden sm:block text-primary">
                   {selectedScenario.icon}
                 </div>
                 <div>

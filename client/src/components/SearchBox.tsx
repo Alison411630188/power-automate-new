@@ -98,7 +98,7 @@ export default function SearchBox() {
       <div
         className={cn(
           "flex items-center gap-2 px-3 py-1.5 rounded-md bg-secondary/50 border border-border cursor-pointer hover:bg-secondary transition-colors w-10 md:w-48",
-          isOpen && "bg-white ring-2 ring-primary/20 border-primary/50"
+          isOpen && "bg-card ring-2 ring-primary/20 border-primary/50"
         )}
         onClick={() => setIsOpen(true)}
       >
@@ -107,7 +107,7 @@ export default function SearchBox() {
       </div>
 
       {isOpen && (
-        <div className="absolute right-0 top-12 w-[90vw] md:w-[400px] bg-white border border-border rounded-xl shadow-2xl overflow-hidden z-[100]">
+        <div className="absolute right-0 top-12 w-[90vw] md:w-[400px] bg-card border border-border rounded-xl shadow-2xl overflow-hidden z-[100]">
           <div className="p-4 border-b border-border flex items-center gap-2">
             <Search className="w-4 h-4 text-muted-foreground" />
             <Input
@@ -115,7 +115,7 @@ export default function SearchBox() {
               placeholder="搜尋關鍵字（例如：Teams, 任務）..."
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="border-none focus-visible:ring-0 p-0 h-auto text-base"
+              className="border-none focus-visible:ring-0 p-0 h-auto text-base bg-transparent text-foreground"
             />
             {query && (
               <button onClick={() => setQuery('')}>
@@ -141,7 +141,7 @@ export default function SearchBox() {
                       <span className="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-primary/10 text-primary">
                         {result.category}
                       </span>
-                      <span className="font-semibold text-sm">{result.title}</span>
+                      <span className="font-semibold text-sm text-foreground">{result.title}</span>
                     </div>
                     <p className="text-xs text-muted-foreground line-clamp-1">
                       {result.excerpt}
