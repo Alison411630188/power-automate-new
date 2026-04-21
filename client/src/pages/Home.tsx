@@ -1,7 +1,7 @@
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, BookOpen, Users, Zap, Cpu, Cloud } from 'lucide-react';
+import { ArrowRight, BookOpen, Users, Zap, Cloud } from 'lucide-react';
 import Footer from '@/components/Footer';
 import { MotionContainer, PageTransition, HoverScale } from '@/components/MotionContainer';
 
@@ -23,7 +23,7 @@ export default function Home() {
             backgroundPosition: 'center',
           }}
         >
-          <div className="absolute inset-0 bg-background/50 backdrop-blur-[2px]"></div>
+          <div className="absolute inset-0 bg-background/70 backdrop-blur-[2px]"></div>
           <div className="relative z-10 container max-w-3xl px-4">
             <MotionContainer direction="up" delay={0.1}>
               <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
@@ -31,7 +31,7 @@ export default function Home() {
               </h1>
             </MotionContainer>
             <MotionContainer direction="up" delay={0.2}>
-              <p className="text-xl text-muted-foreground mb-8">
+              <p className="text-xl text-foreground mb-8">
                 專為企業新手設計的 Microsoft Power Automate 完整指南。從簡單的流程到複雜的自動化，一站式掌握所有技巧。
               </p>
             </MotionContainer>
@@ -81,7 +81,7 @@ export default function Home() {
                         <CardTitle className="text-card-foreground">{feature.title}</CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <p className="text-muted-foreground">{feature.desc}</p>
+                        <p className="text-foreground/80">{feature.desc}</p>
                       </CardContent>
                     </Card>
                   </HoverScale>
@@ -114,7 +114,7 @@ export default function Home() {
                       <div className="flex-1">
                         <p className="text-sm font-semibold text-primary">{item.stage}</p>
                         <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
-                        <p className="text-sm text-muted-foreground">{item.desc}</p>
+                        <p className="text-sm text-foreground/80">{item.desc}</p>
                         <Link href={item.link} className="text-xs text-primary hover:underline mt-2 inline-block font-semibold">
                           {item.linkText} →
                         </Link>
@@ -141,7 +141,7 @@ export default function Home() {
                 <h2 className="text-3xl font-bold mb-6">
                   與 M365 完美整合
                 </h2>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-foreground/80 mb-6">
                   Power Automate 是 Microsoft 365 生態系的核心。無論您使用 Teams、Outlook、SharePoint 還是 Excel，Power Automate 都能無縫協作。
                 </p>
                 <ul className="space-y-3">
@@ -178,12 +178,12 @@ export default function Home() {
                 { q: '如何開始建立我的第一個流程？', a: '訪問 flow.microsoft.com，登入您的 Microsoft 帳戶，選擇流程類型並開始建立。' }
               ].map((faq, idx) => (
                 <MotionContainer key={idx} direction="up" delay={idx * 0.1}>
-                  <Card className="border-border bg-card">
+                  <Card className="border-border bg-card h-full">
                     <CardHeader>
-                      <CardTitle className="text-base text-card-foreground">{faq.q}</CardTitle>
+                      <CardTitle className="text-base text-card-foreground leading-relaxed">{faq.q}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-sm text-muted-foreground">{faq.a}</p>
+                      <p className="text-sm text-foreground/80">{faq.a}</p>
                     </CardContent>
                   </Card>
                 </MotionContainer>
